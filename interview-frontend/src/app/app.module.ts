@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { CitiesComponent } from './cities/cities.component';
 import { CityItemComponent } from './city-item/city-item.component';
+import { SearchCityFormComponent } from './search-city-form/search-city-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CityItemComponent } from './city-item/city-item.component';
     HeaderComponent,
     ButtonComponent,
     CitiesComponent,
-    CityItemComponent
+    CityItemComponent,
+    SearchCityFormComponent
   ],
   imports: [
     BrowserModule,

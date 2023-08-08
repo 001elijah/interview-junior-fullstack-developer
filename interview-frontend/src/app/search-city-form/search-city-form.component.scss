@@ -1,0 +1,21 @@
+.searchForm {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #2c2c2c;
+}
+
+.searchFormInput {
+    width: 100%;
+    padding: 0 30px;
+    font: inherit;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.searchFormInput::placeholder {
+    font: inherit;
+    font-size: 18px;
+}
