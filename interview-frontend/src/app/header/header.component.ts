@@ -8,5 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title: string = 'City Searcher';
   @Input() screenWidth: any;
+  handleSearch() {
+    console.log("Search");
+  }
   ngOnInit() {}
 }

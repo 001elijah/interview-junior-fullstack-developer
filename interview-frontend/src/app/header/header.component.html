@@ -2,7 +2,7 @@
     <div class="container">
         <div class="wrapper">
             <h1 *ngIf="screenWidth >= 768">{{title}}</h1>
-            <app-button></app-button>
+            <app-button (btnClick)="handleSearch()"></app-button>
         </div>
     </div>
 </header>
