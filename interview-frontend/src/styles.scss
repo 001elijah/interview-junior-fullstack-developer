@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import './assets/styles/reset';
+@import './assets/styles/mixins';
+
+.container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 375px) {
+    .container {
+        width: 375px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        min-width: 1280px;
+        max-width: 1440px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
