@@ -1,3 +1,5 @@
-<ul>
-    <li *ngFor="let city of cities"><span>{{city.cityName}}</span></li>
-</ul>
+<section class="container">
+    <ul class="cities">
+        <li class="city" *ngFor="let city of cities"><app-city-item [city]="city"></app-city-item></li>
+    </ul>
+</section>
