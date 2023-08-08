@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 import { City } from '../City';
-import { CITIES } from '../mock-cities';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CityService {
+  private apiUrl = 'http://localhost:5000/cities';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   
   getCities(): Observable<City[]> {
-    const cities = of(CITIES);
-    return cities;
+    return this.http.get<City[]>(this.apiUrl);
   }
 }
