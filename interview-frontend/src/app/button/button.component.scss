@@ -1,15 +1,18 @@
 .btn {
-    width: 120px;
-    height: 48px;
-    background-color: #ff9500;
-    border: 0;
-    border-radius: 8px;
-    outline: none;
-    color: #3f51b5;
-    transition: background-color 250ms;
+    width: 140px;
+    height: 50px;
+    padding: .375rem .75rem;
+    background-color: #1a9bdb;
+    border: 1px solid transparent;
+    border-color: #1a9bdb;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    transition: background-color 150ms;
     cursor: pointer;
 
     &:hover {
-        background-color: #fff200;
+        background-color: #1683b9;
+        border-color: #157bad;
     }
 }
