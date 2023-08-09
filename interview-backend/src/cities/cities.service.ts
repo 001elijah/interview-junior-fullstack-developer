@@ -505,7 +505,12 @@ export class CitiesService {
     },
   ];
 
-  getCities() {
+  getCities(cityName: string) {
+    if (cityName) {
+      return this.cities.filter((city) =>
+        city.cityName.toLowerCase().includes(cityName.toLocaleLowerCase()),
+      );
+    }
     return this.cities;
   }
 }
