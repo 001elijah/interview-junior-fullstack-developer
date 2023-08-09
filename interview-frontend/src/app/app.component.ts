@@ -21,4 +21,7 @@ export class AppComponent {
   handleSearch(cityName: string) {
     this.child.searchCity(cityName);
   }
+  handleUndo() {
+    this.child.undoSearch();
+  }
 }

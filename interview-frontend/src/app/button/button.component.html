@@ -1,1 +1,15 @@
-<button type="submit" class="btn">Search</button>
+<button
+    *ngIf="text === 'Search'"
+    type="submit"
+    class="btn"
+>
+    {{text}}
+</button>
+<button
+    *ngIf="text === 'Undo'"
+    type="'button"
+    class="undoBtn"
+    (click)="onClick()"
+>
+    {{text}}
+</button>

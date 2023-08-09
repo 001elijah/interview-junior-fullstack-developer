@@ -9,8 +9,13 @@ export class HeaderComponent implements OnInit {
   title: string = 'City Searcher';
   @Input() screenWidth: any;
   @Output() onSearchCity = new EventEmitter<string>();
+  @Output() onUndoSearch = new EventEmitter();
   handleSearch(cityName: string) {
     this.onSearchCity.emit(cityName);
+  }
+
+  handleUndo() {
+    this.onUndoSearch.emit();
   }
   ngOnInit() {}
 }

@@ -17,3 +17,22 @@
         border-color: #157bad;
     }
 }
+
+.undoBtn {
+    max-width: 140px;
+    height: 50px;
+    padding: .375rem .75rem;
+    background-color: #a0c9dd;
+    border: 1px solid transparent;
+    border-color: #a0c9dd;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    transition: background-color 150ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #5d9bba;
+        border-color: #5d9bba;
+    }
+}

@@ -3,6 +3,7 @@
         <div class="wrapper">
             <h1 class="title" *ngIf="screenWidth >= 768">{{title}}</h1>
             <app-search-city-form (onSearchCity)="handleSearch($event)"></app-search-city-form>
+            <app-button text="Undo" (btnClick)="handleUndo()"></app-button>
         </div>
     </div>
 </header>

@@ -12,14 +12,15 @@ export class CitiesComponent {
 
   constructor(private cityService: CityService) { };
 
-  // ngOnInit(): void {
-    // this.cityService.getCities().subscribe(cities => this.cities = cities);
-  // }
+  ngOnInit(): void {
+    this.cityService.getCities().subscribe(cities => this.cities = cities);
+  }
 
   searchCity(cityName: string) {
-    if (!cityName) {
-      return
-    }
     this.cityService.getCity(cityName).subscribe(city => this.cities = city);
+  }
+
+  undoSearch() {
+    this.cityService.getCities().subscribe(cities => this.cities = cities);
   }
 }
