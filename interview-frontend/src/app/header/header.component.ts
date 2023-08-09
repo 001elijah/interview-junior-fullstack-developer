@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title: string = 'City Searcher';
   @Input() screenWidth: any;
-  handleSearch() {
-    console.log("Search");
+  @Output() onSearchCity = new EventEmitter<string>();
+  handleSearch(cityName: string) {
+    this.onSearchCity.emit(cityName);
   }
   ngOnInit() {}
 }

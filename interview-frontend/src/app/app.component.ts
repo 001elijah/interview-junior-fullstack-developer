@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { CitiesComponent } from './cities/cities.component';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,9 @@ export class AppComponent {
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
+  }
+  @ViewChild(CitiesComponent) child:CitiesComponent;
+  handleSearch(cityName: string) {
+    this.child.searchCity(cityName);
   }
 }

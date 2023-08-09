@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { City } from '../City';
 
 @Component({
   selector: 'app-search-city-form',
@@ -6,5 +7,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./search-city-form.component.scss']
 })
 export class SearchCityFormComponent {
-  @Input() handleSearch: any;
+  cityName: string;
+  @Output() onSearchCity = new EventEmitter<string>();
+
+  onSubmit() {
+    if (!this.cityName) {
+      alert('Please type a city name!')
+      return;
+    }
+
+
+    this.onSearchCity.emit(this.cityName);
+
+    this.cityName = '';
+  }
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CityService } from "../services/city.service";
 import { City } from '../City';
-import { CITIES } from '../mock-cities';
 
 @Component({
   selector: 'app-cities',
@@ -13,7 +12,14 @@ export class CitiesComponent {
 
   constructor(private cityService: CityService) { };
 
-  ngOnInit(): void {
-    this.cityService.getCities().subscribe(cities => this.cities = cities);
+  // ngOnInit(): void {
+    // this.cityService.getCities().subscribe(cities => this.cities = cities);
+  // }
+
+  searchCity(cityName: string) {
+    if (!cityName) {
+      return
+    }
+    this.cityService.getCity(cityName).subscribe(city => this.cities = city);
   }
 }

@@ -8,4 +8,5 @@ import { City } from '../City';
 })
 export class CityItemComponent {
   @Input() city: City;
+
 }
