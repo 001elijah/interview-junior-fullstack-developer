@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { CitiesComponent } from './cities/cities.component';
 
 @Component({
