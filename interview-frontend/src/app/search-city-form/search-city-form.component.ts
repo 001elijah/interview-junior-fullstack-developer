@@ -10,13 +10,18 @@ export class SearchCityFormComponent {
   @Output() onSearchCity = new EventEmitter<string>();
 
   onSubmit() {
-    if (!this.cityName) {
+    if (!this.cityName.trim()) {
       alert('Please type a city name!')
       return;
     }
 
+    if (Boolean(this.cityName.trim().search(/^[A-Za-z]+$/))) {
+      alert('Only letters are allowed!')
+      return;
+    }
 
-    this.onSearchCity.emit(this.cityName);
+
+    this.onSearchCity.emit(this.cityName.trim());
 
     this.cityName = '';
   }
