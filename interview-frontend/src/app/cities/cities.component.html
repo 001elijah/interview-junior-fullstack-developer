@@ -1,8 +1,8 @@
 <section class="container">
-    <ul class="cities" *ngIf="cities.length > 0">
+    <div class="notFound" *ngIf="error">
+        <span>{{errorMessage}}</span>
+    </div>
+    <ul class="cities" *ngIf="!error && cities.length > 0">
         <li class="city" *ngFor="let city of cities"><app-city-item [city]="city"></app-city-item></li>
     </ul>
-    <div class="notFound" *ngIf="cities.length === 0">
-        <span>No cities found upon your query. Make sure your query is not misspelled. Press "Undo" and try again.</span>
-    </div>
 </section>

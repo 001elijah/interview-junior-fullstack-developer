@@ -14,9 +14,10 @@ export class SearchCityFormComponent {
       alert('Please type a city name!')
       return;
     }
-
-    if (Boolean(this.cityName.trim().search(/^[A-Za-z]+$/))) {
-      alert('Only letters are allowed!')
+    const validation = /[^a-zA-Z\u00E4\u00F6\u00FC\u00C4\u00D6\u00DC\u00df]/.test(this.cityName.trim());
+    if (validation) {
+      alert('Only letters are allowed!');
+      this.cityName = '';
       return;
     }
 
