@@ -9,7 +9,6 @@ export class ButtonComponent {
   @Input() text: string;
   @Output() btnClick = new EventEmitter();
 
-
   onClick() {
     this.btnClick.emit();
   }
