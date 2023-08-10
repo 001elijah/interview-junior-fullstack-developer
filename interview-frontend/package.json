@@ -5,8 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:win": "(if exist ..\\interview-backend\\front rmdir ..\\interview-backend\\front /s /q) && ng build && move dist/interview-frontend ..\\interview-backend\\front",
-    "build:mac": "rm -rf ../interview-backend/front && mkdir ../interview-backend/front && ng build && mv dist/interview-frontend/* ../interview-backend/front/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "json-server --watch db.json --port 5000"
