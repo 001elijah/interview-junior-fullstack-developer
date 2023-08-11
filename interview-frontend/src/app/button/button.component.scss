@@ -38,3 +38,23 @@
         border-color: $blue-undo-btn-hover-color;
     }
 }
+
+.loadMoreBtn {
+    max-width: 140px;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: .375rem .75rem;
+    background-color: $blue-undo-btn-color;
+    border: 1px solid transparent;
+    border-color: $blue-undo-btn-color;
+    border-radius: 4px;
+    color: $white-text-color;
+    text-align: center;
+    transition: background-color 150ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $blue-undo-btn-hover-color;
+        border-color: $blue-undo-btn-hover-color;
+    }
+}

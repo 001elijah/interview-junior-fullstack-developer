@@ -24,12 +24,13 @@ export class CityService {
   }
 
   
-  getCities(): Observable<City[]> {
-    return this.http.get<City[]>(environment.apiUrl).pipe(catchError(this.handleError));
+  getCities(page: number = environment.page, limit: number = environment.limit): Observable<City[]> {
+    const url = `${environment.apiUrl}?page=${page}&limit=${limit}`;
+    return this.http.get<City[]>(url).pipe(catchError(this.handleError));
   }
 
-  getCity(city: string): Observable<City[]> {
-    const url = `${environment.apiUrl}?cityName=${city}`;
+  getCity(city: string, page: number = environment.page, limit: number = environment.limit): Observable<City[]> {
+    const url = `${environment.apiUrl}?cityName=${city}&page=${page}&limit=${limit}`;
     return this.http.get<City[]>(url).pipe(catchError(this.handleError));
   }
 }

@@ -16,6 +16,6 @@ export class CitiesService {
         )
         .slice((page - 1) * limit, page * limit);
     }
-    return this.cities;
+    return this.cities.slice((page - 1) * limit, page * limit);
   }
 }

@@ -13,3 +13,11 @@
 >
     {{text}}
 </button>
+<button
+    *ngIf="text === 'Load more'"
+    type="'button"
+    class="loadMoreBtn"
+    (click)="onClick()"
+>
+    {{text}}
+</button>

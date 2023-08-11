@@ -1,2 +1,2 @@
-<app-header [screenWidth]="getScreenWidth" (onSearchCity)="handleSearch($event)" (onUndoSearch)="handleUndo()"></app-header>
-<app-cities></app-cities>
+<app-header [screenWidth]="getScreenWidth" [(showUndo)]="isUndoShown" (onSearchCity)="handleSearch($event)" (onUndoSearch)="handleUndo()"></app-header>
+<app-cities [(showUndo)]="isUndoShown"></app-cities>

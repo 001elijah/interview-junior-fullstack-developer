@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-city-form.component.scss']
 })
 export class SearchCityFormComponent {
-  cityName: string;
+  cityName: string = '';
   @Output() onSearchCity = new EventEmitter<string>();
 
   onSubmit() {

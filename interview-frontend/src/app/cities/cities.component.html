@@ -1,8 +1,9 @@
 <section class="container">
-    <div class="notFound" *ngIf="error">
+    <div class="notFound" *ngIf="error && page === 1">
         <span>{{errorMessage}}</span>
     </div>
-    <ul class="cities" *ngIf="!error && cities.length > 0">
+    <ul class="cities">
         <li class="city" *ngFor="let city of cities"><app-city-item [city]="city"></app-city-item></li>
     </ul>
+    <app-button *ngIf="!error && !isTheEndOfCollection" text="Load more" (btnClick)="handleLoadMore()"></app-button>
 </section>
