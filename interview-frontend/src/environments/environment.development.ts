@@ -1,7 +1,7 @@
 export const environment = {
     production: false,
-    // apiUrl: 'https://frozen-earth-64018-1b6e1e2dbf34.herokuapp.com/cities'
-    apiUrl: 'http://localhost:3000/cities',
+    apiUrl: 'https://salty-shelf-05013-1217defc3014.herokuapp.com/cities',
+    // apiUrl: 'http://localhost:3000/cities',
     page: 1,
     limit: 5
 };

@@ -21,7 +21,7 @@
     gap: 30px;
     
     @include tablet {
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 }
 
