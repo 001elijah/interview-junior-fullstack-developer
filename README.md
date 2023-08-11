@@ -1,4 +1,8 @@
-# Interview for Junior Full-Stack developer
+# Getting started
+
+Dear ladies and gentlemen, in order to start the project locally on your machine, please clone the repository, than configure environments both for backend and frontend. After that please run for both directories `npm i`, than in terminal for backend run `npm run start:dev`, for frontend terminal run `npm run start`. If you have any questions, please don't hesitate to contact me.
+
+## Interview for Junior Full-Stack developer
 
 Dear applicant,
 
