@@ -2,7 +2,10 @@
 
 Dear ladies and gentlemen, this is the test task conducted by me. In order to start the project locally on your machine, please clone the repository, then configure environments both for backend and frontend. After that please run for both directories `npm i`, than in terminal for backend run `npm run start:dev`, for frontend terminal run `npm run start`. If you have any questions, please don't hesitate to contact me.
 
-Below is the original technical task:
+Backend is deployed on Heroku, [`link`](https://salty-shelf-05013-1217defc3014.herokuapp.com/)
+Frontend is deployed on GH-pages, [`link`](https://001elijah.github.io/interview-junior-fullstack-developer/)
+
+Below is the original technical task text:
 
 ## Interview for Junior Full-Stack developer
 
