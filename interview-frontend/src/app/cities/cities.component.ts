@@ -10,6 +10,7 @@ import { City } from '../City';
 })
 export class CitiesComponent {
   cities: City[] = [];
+  isLoading: boolean = false;
   page: number = environment.page;
   limit: number = environment.limit;
   error: boolean = false;
@@ -29,14 +30,17 @@ export class CitiesComponent {
   }
 
   searchCities() {
+    this.isLoading = true;
     this.cityService.getCities(this.page, this.limit).subscribe({
       next: cities => {
         if (cities.length < this.limit) {
           this.isTheEndOfCollection = true;
         }
-        this.cities.push(...cities)
+        this.cities.push(...cities);
+        this.isLoading = false;
       },
       error: (error: any) => {
+        this.isLoading = false;
         this.error = true;
         this.errorMessage = error.message;
         if (this.errorMessage === 'No cities found upon your query. Make sure your query is not misspelled. Press "Undo" and try again.') {
